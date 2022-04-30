@@ -1,0 +1,14 @@
+src/node_modules
+src/public/*
+src/storage/*
+src/vendor
+src/.env
+src/.phpunit.result.cache
+src/Homestead.json
+src/Homestead.yaml
+src/npm-debug.log
+src/yarn-error.log
+
+*.log
+*.sqlite
+src/.htaccess
