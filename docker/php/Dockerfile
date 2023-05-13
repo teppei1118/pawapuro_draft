@@ -1,4 +1,4 @@
-FROM php:8.1.16-fpm
+FROM php:8.1.17-fpm
 
 # Viteのサーバーにローカルからアクセスするために開ける
 EXPOSE 5173

@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::controller(\App\Http\Controllers\TestController::class)->group(function () {
+    Route::get('/test', 'index');
+});
 Route::get('/', function () {
-    return view('welcome');
+
 });
