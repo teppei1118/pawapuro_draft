@@ -11,6 +11,36 @@ use App\Models\Player;
 
 class PlayerEntity
 {
+    /**
+     * @param int $id
+     * @param string $name
+     * @param TeamObjectValue $team
+     * @param BallHandObjectValue $ballHand
+     * @param BatHandObjectValue $batHand
+     * @param PositionObjectValue $mainPosition
+     * @param int $ballSpeed
+     * @param int $control
+     * @param int $stamina
+     * @param int $ballistic
+     * @param int $meet
+     * @param int $power
+     * @param int $runningSpeed
+     * @param int $shoulder
+     * @param int $catch
+     * @param SpecialAbilityObjectValue $vsPinch
+     * @param SpecialAbilityObjectValue $vsLeftHitter
+     * @param SpecialAbilityObjectValue $strength
+     * @param SpecialAbilityObjectValue $stretch
+     * @param SpecialAbilityObjectValue $quick
+     * @param SpecialAbilityObjectValue $vsChance
+     * @param SpecialAbilityObjectValue $vsLeftPitcher
+     * @param SpecialAbilityObjectValue $catcher
+     * @param SpecialAbilityObjectValue $steal
+     * @param SpecialAbilityObjectValue $baseRunning
+     * @param SpecialAbilityObjectValue $throwing
+     * @param SpecialAbilityObjectValue $notInjury
+     * @param SpecialAbilityObjectValue $recovery
+     */
     public function __construct(
         private readonly int $id = 0,
         private readonly string $name = '',
@@ -60,11 +90,11 @@ class PlayerEntity
     }
 
     /**
-     * @return int
+     * @return TeamObjectValue
      */
-    public function getTeamId(): int
+    public function getTeam(): TeamObjectValue
     {
-        return $this->teamId;
+        return $this->team;
     }
 
     /**

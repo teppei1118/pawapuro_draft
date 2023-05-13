@@ -6,6 +6,12 @@ use App\Domain\ObjectValue\BrakingBallDirectionObjectValue;
 
 class BrakingBallEntity
 {
+    /**
+     * @param int $id
+     * @param string $name
+     * @param BrakingBallDirectionObjectValue $breakingBallDirection
+     * @param bool $isOriginal
+     */
     public function __construct(
         private readonly int $id = 0,
         private readonly string $name = '',
@@ -47,6 +53,4 @@ class BrakingBallEntity
     {
         return $this->isOriginal;
     }
-
-
 }
