@@ -23,6 +23,10 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition wherePlayerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition wherePositionCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition whereUpdatedAt($value)
+ * @method static \Database\Factories\PlayerPositionFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PlayerPosition query()
  * @mixin \Eloquent
  */
 class PlayerPosition extends Model

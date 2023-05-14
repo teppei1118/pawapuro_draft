@@ -2,7 +2,7 @@
 
 namespace App\Domain\ObjectValue;
 
-class SpecialAbilityObjectValue extends BaseObjectValue
+class SpecialAbilityAmountObjectValue extends BaseObjectValue
 {
     public const G_CODE = 1;
     public const F_CODE = 2;

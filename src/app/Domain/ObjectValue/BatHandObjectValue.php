@@ -10,7 +10,7 @@ class BatHandObjectValue extends BaseObjectValue
 
     public const RIGHT_NAME  = "右打ち";
     public const LEFT_NAME   = "左打ち";
-    public const SWITCH_NAME = "左打ち";
+    public const SWITCH_NAME = "両打ち";
 
     /**
      * @return string[]

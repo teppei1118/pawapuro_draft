@@ -5,7 +5,7 @@ namespace App\Domain\Entities;
 use App\Domain\ObjectValue\BallHandObjectValue;
 use App\Domain\ObjectValue\BatHandObjectValue;
 use App\Domain\ObjectValue\PositionObjectValue;
-use App\Domain\ObjectValue\SpecialAbilityObjectValue;
+use App\Domain\ObjectValue\SpecialAbilityAmountObjectValue;
 use App\Domain\ObjectValue\TeamObjectValue;
 use App\Exceptions\ObjectValueException;
 use App\Models\Player;
@@ -16,19 +16,19 @@ class PlayerEntity
     private BallHandObjectValue $ballHand;
     private BatHandObjectValue $batHand;
     private PositionObjectValue $mainPosition;
-    private SpecialAbilityObjectValue $vsPinch;
-    private SpecialAbilityObjectValue $vsLeftHitter;
-    private SpecialAbilityObjectValue $strength;
-    private SpecialAbilityObjectValue $stretch;
-    private SpecialAbilityObjectValue $quick;
-    private SpecialAbilityObjectValue $vsChance;
-    private SpecialAbilityObjectValue $vsLeftPitcher;
-    private SpecialAbilityObjectValue $catcher;
-    private SpecialAbilityObjectValue $steal;
-    private SpecialAbilityObjectValue $baseRunning;
-    private SpecialAbilityObjectValue $throwing;
-    private SpecialAbilityObjectValue $notInjury;
-    private SpecialAbilityObjectValue $recovery;
+    private SpecialAbilityAmountObjectValue $vsPinch;
+    private SpecialAbilityAmountObjectValue $vsLeftHitter;
+    private SpecialAbilityAmountObjectValue $strength;
+    private SpecialAbilityAmountObjectValue $stretch;
+    private SpecialAbilityAmountObjectValue $quick;
+    private SpecialAbilityAmountObjectValue $vsChance;
+    private SpecialAbilityAmountObjectValue $vsLeftPitcher;
+    private SpecialAbilityAmountObjectValue $catcher;
+    private SpecialAbilityAmountObjectValue $steal;
+    private SpecialAbilityAmountObjectValue $baseRunning;
+    private SpecialAbilityAmountObjectValue $throwing;
+    private SpecialAbilityAmountObjectValue $notInjury;
+    private SpecialAbilityAmountObjectValue $recovery;
 
     /**
      * @param int $id
@@ -95,19 +95,19 @@ class PlayerEntity
         $this->ballHand = new BallHandObjectValue($this->ballHandCode);
         $this->batHand = new BatHandObjectValue($this->batHandCode);
         $this->mainPosition = new PositionObjectValue($this->mainPositionCode);
-        $this->vsPinch = new SpecialAbilityObjectValue($this->vsPinchCode);
-        $this->vsLeftHitter = new SpecialAbilityObjectValue($this->vsLeftHitterCode);
-        $this->strength = new SpecialAbilityObjectValue($this->strengthCode);
-        $this->stretch = new SpecialAbilityObjectValue($this->stretchCode);
-        $this->quick = new SpecialAbilityObjectValue($this->quickCode);
-        $this->vsChance = new SpecialAbilityObjectValue($this->vsChanceCode);
-        $this->vsLeftPitcher = new SpecialAbilityObjectValue($this->vsLeftPitcherCode);
-        $this->catcher = new SpecialAbilityObjectValue($this->catcherCode);
-        $this->steal = new SpecialAbilityObjectValue($this->stealCode);
-        $this->baseRunning = new SpecialAbilityObjectValue($this->baseRunningCode);
-        $this->throwing = new SpecialAbilityObjectValue($this->throwingCode);
-        $this->notInjury = new SpecialAbilityObjectValue($this->notInjuryCode);
-        $this->recovery = new SpecialAbilityObjectValue($this->recoveryCode);
+        $this->vsPinch = new SpecialAbilityAmountObjectValue($this->vsPinchCode);
+        $this->vsLeftHitter = new SpecialAbilityAmountObjectValue($this->vsLeftHitterCode);
+        $this->strength = new SpecialAbilityAmountObjectValue($this->strengthCode);
+        $this->stretch = new SpecialAbilityAmountObjectValue($this->stretchCode);
+        $this->quick = new SpecialAbilityAmountObjectValue($this->quickCode);
+        $this->vsChance = new SpecialAbilityAmountObjectValue($this->vsChanceCode);
+        $this->vsLeftPitcher = new SpecialAbilityAmountObjectValue($this->vsLeftPitcherCode);
+        $this->catcher = new SpecialAbilityAmountObjectValue($this->catcherCode);
+        $this->steal = new SpecialAbilityAmountObjectValue($this->stealCode);
+        $this->baseRunning = new SpecialAbilityAmountObjectValue($this->baseRunningCode);
+        $this->throwing = new SpecialAbilityAmountObjectValue($this->throwingCode);
+        $this->notInjury = new SpecialAbilityAmountObjectValue($this->notInjuryCode);
+        $this->recovery = new SpecialAbilityAmountObjectValue($this->recoveryCode);
     }
 
     /**
@@ -143,105 +143,105 @@ class PlayerEntity
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getVsPinch(): SpecialAbilityObjectValue
+    public function getVsPinch(): SpecialAbilityAmountObjectValue
     {
         return $this->vsPinch;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getVsLeftHitter(): SpecialAbilityObjectValue
+    public function getVsLeftHitter(): SpecialAbilityAmountObjectValue
     {
         return $this->vsLeftHitter;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getStrength(): SpecialAbilityObjectValue
+    public function getStrength(): SpecialAbilityAmountObjectValue
     {
         return $this->strength;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getStretch(): SpecialAbilityObjectValue
+    public function getStretch(): SpecialAbilityAmountObjectValue
     {
         return $this->stretch;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getQuick(): SpecialAbilityObjectValue
+    public function getQuick(): SpecialAbilityAmountObjectValue
     {
         return $this->quick;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getVsChance(): SpecialAbilityObjectValue
+    public function getVsChance(): SpecialAbilityAmountObjectValue
     {
         return $this->vsChance;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getVsLeftPitcher(): SpecialAbilityObjectValue
+    public function getVsLeftPitcher(): SpecialAbilityAmountObjectValue
     {
         return $this->vsLeftPitcher;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getCatcher(): SpecialAbilityObjectValue
+    public function getCatcher(): SpecialAbilityAmountObjectValue
     {
         return $this->catcher;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getSteal(): SpecialAbilityObjectValue
+    public function getSteal(): SpecialAbilityAmountObjectValue
     {
         return $this->steal;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getBaseRunning(): SpecialAbilityObjectValue
+    public function getBaseRunning(): SpecialAbilityAmountObjectValue
     {
         return $this->baseRunning;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getThrowing(): SpecialAbilityObjectValue
+    public function getThrowing(): SpecialAbilityAmountObjectValue
     {
         return $this->throwing;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getNotInjury(): SpecialAbilityObjectValue
+    public function getNotInjury(): SpecialAbilityAmountObjectValue
     {
         return $this->notInjury;
     }
 
     /**
-     * @return SpecialAbilityObjectValue
+     * @return SpecialAbilityAmountObjectValue
      */
-    public function getRecovery(): SpecialAbilityObjectValue
+    public function getRecovery(): SpecialAbilityAmountObjectValue
     {
         return $this->recovery;
     }

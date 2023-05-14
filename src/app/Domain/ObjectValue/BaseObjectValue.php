@@ -11,6 +11,7 @@ class BaseObjectValue
     const UNKNOWN_CODE = 0;
 
     const UNKNOWN_NAME = '未設定';
+
     /**
      * @param int $code
      * @throws ObjectValueException

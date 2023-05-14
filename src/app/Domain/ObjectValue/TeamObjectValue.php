@@ -102,6 +102,6 @@ class TeamObjectValue extends BaseObjectValue
         } elseif (array_key_exists($this->code(), $this->listPacific())) {
             return new LeagueObjectValue(LeagueObjectValue::OTHER_CODE);
         }
-        return new LeagueObjectValue(BaseObjectValue::UNKNOWN_CODE);
+        return new LeagueObjectValue(self::UNKNOWN_CODE);
     }
 }

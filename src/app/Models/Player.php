@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Domain\ObjectValue\BallHandObjectValue;
 use App\Domain\ObjectValue\BatHandObjectValue;
 use App\Domain\ObjectValue\PositionObjectValue;
-use App\Domain\ObjectValue\SpecialAbilityObjectValue;
+use App\Domain\ObjectValue\SpecialAbilityAmountObjectValue;
 use App\Domain\ObjectValue\TeamObjectValue;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -108,5 +108,5 @@ class Player extends Model
     const DEFAULT_BASIC_ABILITY = 0;
 
     // 特殊能力のデフォルト値
-    const DEFAULT_SPECIAL_ABILITY = SpecialAbilityObjectValue::D_CODE;
+    const DEFAULT_SPECIAL_ABILITY = SpecialAbilityAmountObjectValue::D_CODE;
 }
