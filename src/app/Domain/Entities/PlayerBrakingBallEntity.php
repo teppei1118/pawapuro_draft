@@ -6,15 +6,15 @@ class PlayerBrakingBallEntity
 {
     /**
      * @param int $id
-     * @param PlayerEntity $player
-     * @param BrakingBallEntity $brakingBall
-     * @param int $
+     * @param int $playerId
+     * @param int $brakingBallId
+     * @param int $amount
      */
     public function __construct(
-        private readonly int $id = 0,
-        private readonly PlayerEntity $player = new PlayerEntity(),
-        private readonly BrakingBallEntity $brakingBall = new BrakingBallEntity(),
-        private readonly int amount = 0,
+        private readonly int $id            = 0,
+        private readonly int $playerId      = 0,
+        private readonly int $brakingBallId = 0,
+        private readonly int $amount        = 0,
     ) {
     }
 

@@ -3,23 +3,26 @@
 namespace App\Domain\Entities;
 
 use App\Domain\ObjectValue\BrakingBallDirectionObjectValue;
+use App\Exceptions\ObjectValueException;
 
 class BrakingBallEntity
 {
+    private BrakingBallDirectionObjectValue $brakingBallDirection;
+
     /**
      * @param int $id
      * @param string $name
-     * @param BrakingBallDirectionObjectValue $breakingBallDirection
+     * @param int $brakingDirectionCode
      * @param bool $isOriginal
+     * @throws ObjectValueException
      */
     public function __construct(
-        private readonly int $id = 0,
-        private readonly string $name = '',
-        private readonly BrakingBallDirectionObjectValue $breakingBallDirection = new BrakingBallDirectionObjectValue(
-            BrakingBallDirectionObjectValue::STRAIGHT_CODE
-        ),
-        private readonly bool $isOriginal = false,
+        private readonly int $id                   = 0,
+        private readonly string $name              = '',
+        private readonly int $brakingDirectionCode = 0,
+        private readonly bool $isOriginal          = false,
     ) {
+        $this->brakingBallDirection = new BrakingBallDirectionObjectValue($this->brakingDirectionCode);
     }
 
     /**
@@ -41,9 +44,9 @@ class BrakingBallEntity
     /**
      * @return BrakingBallDirectionObjectValue
      */
-    public function getBreakingBallDirection(): BrakingBallDirectionObjectValue
+    public function getBrakingBallDirection(): BrakingBallDirectionObjectValue
     {
-        return $this->breakingBallDirection;
+        return $this->brakingBallDirection;
     }
 
     /**
